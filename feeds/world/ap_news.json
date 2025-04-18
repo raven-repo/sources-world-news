@@ -1,0 +1,98 @@
+{
+  "name": "AP News",
+  "home-page": "https://apnews.com",
+  "icon-url": "https://apnews.com/favicon.ico",
+  "category": [
+    "English",
+    "News",
+    "World"
+  ],
+  "categories": {
+    "extractor": "css",
+    "locator": [
+      ".Page-header-navigation .AnClick-MainNav"
+    ],
+    "include": {},
+    "exclude": [
+      "Election 2024",
+      "Fact Check",
+      "Oddities",
+      "Newsletters",
+      "Video",
+      "Photography ",
+      "AP Buyline Personal Finance",
+      "AP Buyline Shopping",
+      "Press Releases",
+      "Press Releases",
+      "My Account"
+    ]
+  },
+  "category-url": "{home-page}/{category}",
+  "supports-custom-category": true,
+  "category-articles": {
+    "extractor": "css",
+    "locators": {
+      "container": ".PageListStandardH .PagePromo",
+      "title": ".PagePromo-title",
+      "excerpt": ".PagePromo-description",
+      "author": "",
+      "thumbnail": "img",
+      "url": "a",
+      "time": "bsp-timestamp",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "search-url": "{home-page}/search?q={query}&p={page}",
+  "search-articles": {
+    "extractor": "css",
+    "locators": {
+      "container": ".SearchResultsModule-results .PagePromo",
+      "title": ".PagePromo-title",
+      "excerpt": ".PagePromo-description",
+      "author": "",
+      "thumbnail": "img",
+      "url": "a",
+      "time": "bsp-timestamp",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "Unix Epoch",
+    "modifications": []
+  },
+  "article": {
+    "extractor": "css",
+    "locators": {
+      "container": "main",
+      "title": "",
+      "excerpt": "div[data-gu-name='standfirst'] p",
+      "author": "a[rel=author]",
+      "thumbnail": ".Page-main .Image",
+      "url": ".content__label__link span",
+      "time": "",
+      "tags": [
+        "div[data-component=tags] a"
+      ],
+      "category": "",
+      "content": [
+        ".RichTextStoryBody",
+        "#liveblog-body",
+        ".VideoPage-pageSubHeading"
+      ]
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "ads": [
+    "div[data-component='links-block']",
+    "div[data-component='ad-slot']"
+  ],
+  "headers": {}
+}

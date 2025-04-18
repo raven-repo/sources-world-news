@@ -1,0 +1,95 @@
+{
+  "name": "BBC",
+  "home-page": "https://www.bbc.com",
+  "icon-url": "https://www.bbc.com/favicon.ico",
+  "category": [
+    "English",
+    "News",
+    "World"
+  ],
+  "categories": {
+    "extractor": "json",
+    "locator": [],
+    "include": {
+      "World": "07cedf01-f642-4b92-821f-d7b324b8ba73",
+      "UK": "27d91e93-c35c-4e30-87bf-1bd443496470",
+      "Africa": "f7905f4a-3031-4e07-ac0c-ad31eeb6a08e",
+      "Asia": "ec977d36-fc91-419e-a860-b151836c176b",
+      "Australia": "3307dc97-b7f0-47be-a1fb-c988b447cc72",
+      "Europe": "e2cc1064-8367-4b1e-9fb7-aed170edc48f",
+      "Latin America": "16d132f4-d562-4256-8b68-743fe23dab8c",
+      "Middle East": "b08a1d2f-6911-4738-825a-767895b8bfc4"
+    },
+    "exclude": []
+  },
+  "category-url": "https://web-cdn.api.bbci.co.uk/xd/content-collection/{category}?country=in&page={page}&size=9",
+  "supports-custom-category": false,
+  "category-articles": {
+    "extractor": "json",
+    "locators": {
+      "container": "$.data.*",
+      "title": "title",
+      "excerpt": "summary",
+      "author": "x",
+      "thumbnail": "indexImage.model.blocks.src",
+      "url": "path",
+      "time": "lastPublishedAt",
+      "tags": [
+        "topics[*]"
+      ],
+      "category": "topics",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "ISO 8601",
+    "modifications": []
+  },
+  "search-url": "https://www.bbc.com/search?q={query}&page={page}",
+  "search-articles": {
+    "extractor": "css",
+    "locators": {
+      "container": "div[data-testid='liverpool-card']",
+      "title": "h2",
+      "excerpt": "p",
+      "author": "",
+      "thumbnail": "img",
+      "url": "a",
+      "time": "span[data-testid='card-metadata-lastupdated']",
+      "tags": [
+        "span[data-testid='card-metadata-tag']"
+      ],
+      "category": "span[data-testid='card-metadata-tag']",
+      "content": []
+    },
+    "timezone": "Asia/Kolkata",
+    "date-format": "d MMM yyyy",
+    "modifications": []
+  },
+  "article": {
+    "extractor": "css",
+    "locators": {
+      "container": "main",
+      "title": "",
+      "excerpt": "",
+      "author": "div[data-testid='byline-new-contributors'] span",
+      "thumbnail": "",
+      "url": "{homepage}{url}",
+      "time": "",
+      "tags": [
+        "div[data-component=tags] a"
+      ],
+      "category": "",
+      "content": [
+        "article"
+      ]
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "ads": [
+    "div[data-component='links-block']",
+    "div[data-component='ad-slot']"
+  ],
+  "headers": {}
+}

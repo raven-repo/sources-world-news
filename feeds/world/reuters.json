@@ -1,0 +1,104 @@
+{
+  "name": "Reuters",
+  "home-page": "https://www.reuters.com",
+  "icon-url": "https://www.reuters.com/favicon.ico",
+  "language": "English",
+  "category": [
+    "English",
+    "News",
+    "World"
+  ],
+  "categories": {
+    "extractor": "json",
+    "locator": [],
+    "include": {
+      "World": "world",
+      "Business": "business",
+      "Markets": "markets",
+      "Sustainability": "sustainability",
+      "Legal": "legal",
+      "Breaking Views": "breakingviews",
+      "Technology": "technology",
+      "Sports": "sports",
+      "Science": "science",
+      "Lifestyle": "lifestyle"
+    },
+    "exclude": []
+  },
+  "category-url": "{home-page}/pf/api/v3/content/fetch/articles-by-section-alias-or-id-v1?query={\"arc-site\":\"reuters\",\"fetch_type\":\"collection\",\"offset\":{offset},\"section_id\":\"/{category}/\",\"size\":{size},\"uri\":\"/{category}/\",\"website\":\"reuters\"}&_website=reuters",
+  "supports-custom-category": true,
+  "category-articles": {
+    "extractor": "json",
+    "locators": {
+      "container": "$.result.articles.*",
+      "title": "title",
+      "excerpt": "description",
+      "author": "authors",
+      "thumbnail": "thumbnail.url",
+      "url": "canonical_url",
+      "time": "updated_time",
+      "tags": [
+        "kickers.names[*]"
+      ],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "ISO 8601",
+    "modifications": []
+  },
+  "search-url": "{home-page}/pf/api/v3/content/fetch/articles-by-search-v2?query={\"keyword\":\"{query}\",\"offset\":{offset},\"orderby\":\"display_date:desc\",\"size\":{size},\"website\":\"reuters\"}&_website=reuters",
+  "search-articles": {
+    "extractor": "json",
+    "locators": {
+      "container": "$.result.articles.*",
+      "title": "title",
+      "excerpt": "description",
+      "author": "authors",
+      "thumbnail": "thumbnail.url",
+      "url": "canonical_url",
+      "time": "updated_time",
+      "tags": [
+        "kickers.names[*]"
+      ],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "ISO 8601",
+    "modifications": []
+  },
+  "article": {
+    "extractor": "css",
+    "locators": {
+      "container": "article",
+      "title": "",
+      "excerpt": "",
+      "author": "",
+      "thumbnail": "",
+      "url": "",
+      "time": "",
+      "tags": [],
+      "category": "",
+      "content": [
+        "div[class*='article-body__content']"
+      ]
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "ads": [
+    "aside",
+    "div[class*='context-widget']"
+  ],
+  "headers": {
+    "Host": "www.reuters.com",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0",
+    "Cookie": "",
+    "Sec-Fetch-Dest":"document",
+    "Sec-Fetch-Mode":"navigate",
+    "Sec-Fetch-Site":"none",
+    "Sec-Fetch-User":"?1"
+  }
+}

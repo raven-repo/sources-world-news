@@ -1,0 +1,96 @@
+{
+  "name": "Al Jazeera",
+  "home-page": "https://www.aljazeera.com",
+  "icon-url": "https://www.aljazeera.com/favicon_aje.ico",
+  "category": [
+    "English",
+    "News",
+    "World"
+  ],
+  "categories": {
+    "extractor": "css",
+    "locator": [
+      ".header-menu .menu__item--aje a"
+    ],
+    "include": {},
+    "exclude": [
+      "News",
+      "Features",
+      "Opinion",
+      "Investigations",
+      "Interactives",
+      "In Pictures",
+      "Podcasts",
+      "Video",
+      "Economy",
+      "Climate Crisis"
+    ]
+  },
+  "category-url": "https://www.aljazeera.com/graphql?wp-site=aje&operationName=ArchipelagoAjeSectionPostsQuery&variables={\"category\":\"{category}\",\"categoryType\":\"where\",\"postTypes\":[\"blog\",\"episode\",\"opinion\",\"post\",\"video\",\"external-article\",\"gallery\",\"podcast\",\"longform\",\"liveblog\"],\"quantity\":{size},\"offset\":{offset}}&extensions={}",
+  "supports-custom-category": true,
+  "category-articles": {
+    "extractor": "json",
+    "locators": {
+      "container": "$.data.articles.*",
+      "title": "title",
+      "excerpt": "excerpt",
+      "author": "author[0].name",
+      "thumbnail": "featuredImage.sourceUrl",
+      "url": "link",
+      "time": "date",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "ISO 8601",
+    "modifications": []
+  },
+  "search-url": "",
+  "search-articles": {
+    "extractor": "",
+    "locators": {
+      "container": "",
+      "title": "",
+      "excerpt": "",
+      "author": "",
+      "thumbnail": "",
+      "url": "",
+      "time": "",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "article": {
+    "extractor": "css",
+    "locators": {
+      "container": "main",
+      "title": "h1",
+      "excerpt": "article__subhead",
+      "author": "",
+      "thumbnail": ".article-featured-image img",
+      "url": "",
+      "time": "",
+      "tags": [
+        ".topics a"
+      ],
+      "category": "",
+      "content": [
+        ".wysiwyg"
+      ]
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "ads": [
+    ".more-on"
+  ],
+  "headers": {
+    "wp-site": "aje"
+  }
+}

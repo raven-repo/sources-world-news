@@ -1,0 +1,101 @@
+{
+  "name": "CNN",
+  "home-page": "https://edition.cnn.com",
+  "icon-url": "https://edition.cnn.com/media/sites/cnn/favicon.ico",
+  "category": [
+    "English",
+    "News",
+    "World"
+  ],
+  "categories": {
+    "extractor": "css",
+    "locator": [
+      ".Page-header-navigation .AnClick-MainNav"
+    ],
+    "include": {
+      "US": "us",
+      "World": "world",
+      "Politics": "politics",
+      "Business": "business",
+      "Opinion": "opinion",
+      "Health": "health",
+      "Entertainment": "entertainment",
+      "Style": "style",
+      "Travel": "travel",
+      "Sports": "sports"
+    },
+    "exclude": [
+    ]
+  },
+  "category-url": "{home-page}/{category}",
+  "supports-custom-category": true,
+  "category-articles": {
+    "extractor": "css",
+    "locators": {
+      "container": ".layout--wide-left-balanced-2 .container__item",
+      "title": ".container__headline-text",
+      "excerpt": "",
+      "author": "",
+      "thumbnail": "img",
+      "url": "a",
+      "time": "",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "search-url": "https://search.prod.di.api.cnn.io/content?q={query}&size={size}&from={offset}&page={page}&sort=newest&request_id=0",
+  "search-articles": {
+    "extractor": "json",
+    "locators": {
+      "container": "$.result.*",
+      "title": "headline",
+      "excerpt": "body",
+      "author": "",
+      "thumbnail": "thumbnail",
+      "url": "url",
+      "time": "lastModifiedDate",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "ISO 8601",
+    "modifications": [
+    ]
+  },
+  "article": {
+    "extractor": "css",
+    "locators": {
+      "container": "main",
+      "title": "",
+      "excerpt": "div[data-gu-name='standfirst'] p",
+      "author": "a[rel=author]",
+      "thumbnail": ".Page-main .Image",
+      "url": ".content__label__link span",
+      "time": "",
+      "tags": [
+        "div[data-component=tags] a"
+      ],
+      "category": "",
+      "content": [
+        ".article__content-container",
+        ".RichTextStoryBody",
+        "#liveblog-body",
+        ".VideoPage-pageSubHeading"
+      ]
+    },
+    "timezone": "EDT",
+    "date-format": "h:mm a, EEE MMMM dd, yyyy",
+    "modifications": [
+    ]
+  },
+  "ads": [
+    "div[data-component='links-block']",
+    "div[data-component='ad-slot']"
+  ],
+  "headers": {}
+}

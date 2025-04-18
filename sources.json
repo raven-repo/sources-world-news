@@ -1,0 +1,34 @@
+{
+  "name": "World News",
+  "description": "",
+  "changelog": "CHANGELOG.md",
+  "feeds": [
+    {
+      "name": "Reuters",
+      "file": "feeds/world/reuters.json",
+      "other-versions": []
+    },
+    {
+      "name": "CNN",
+      "file": "feeds/world/cnn.json",
+      "other-versions": []
+    },
+    {
+      "name": "AP News",
+      "file": "feeds/world/ap_news.json",
+      "other-versions": []
+    },
+    {
+      "name": "BBC",
+      "file": "feeds/world/bbc.json",
+      "other-versions": []
+    },
+    {
+      "name": "Al Jazeera",
+      "file": "feeds/world/al_jazeera.json",
+      "other-versions": []
+    }
+  ],
+  "watches": []
+}
+

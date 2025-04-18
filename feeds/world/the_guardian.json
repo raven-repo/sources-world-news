@@ -1,0 +1,88 @@
+{
+  "name": "The Guardian",
+  "home-page": "https://www.theguardian.com",
+  "icon-url": "https://www.theguardian.com/favicon.ico",
+  "category": [
+    "English",
+    "News",
+    "World"
+  ],
+  "categories": {
+    "extractor": "css",
+    "locator": [],
+    "include": {
+      "World": "world",
+      "Sport": "uk/sport",
+      "Culture": "uk/culture",
+      "Business": "business",
+      "Lifestyle": "uk/lifeandstyle",
+      "Science": "science"
+    },
+    "exclude": []
+  },
+  "category-url": "{homepage}/{category}?page={page}",
+  "supports-custom-category": true,
+  "category-articles": {
+    "extractor": "css",
+    "locators": {
+      "container": ".dcr-5rptw1",
+      "title": "h3 span",
+      "excerpt": ".dcr-oi4shr",
+      "author": "",
+      "thumbnail": "picture",
+      "url": "a",
+      "time": "time",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "ISO 8601",
+    "modifications": []
+  },
+  "search-url": "",
+  "search-articles": {
+    "extractor": "",
+    "locators": {
+      "container": "",
+      "title": "",
+      "excerpt": "",
+      "author": "",
+      "thumbnail": "",
+      "url": "",
+      "time": "",
+      "tags": [],
+      "category": "",
+      "content": []
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "article": {
+    "extractor": "css",
+    "locators": {
+      "container": ".dcr-2zxs1v",
+      "title": "h1",
+      "excerpt": "div[data-gu-name=standfirst]",
+      "author": ".dcr-1m5k3yy",
+      "thumbnail": ".dcr-evn1e9 img",
+      "url": "",
+      "time": "",
+      "tags": [
+        ".topics a"
+      ],
+      "category": "",
+      "content": [
+        "div[data-gu-name=body]"
+      ]
+    },
+    "timezone": "",
+    "date-format": "",
+    "modifications": []
+  },
+  "ads": [
+    "fieldset"
+  ],
+  "headers": {}
+}
