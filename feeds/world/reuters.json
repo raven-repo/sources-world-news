@@ -69,7 +69,7 @@
     "modifications": []
   },
   "article": {
-    "extractor": "readability",
+    "extractor": "css",
     "locators": {
       "container": "article",
       "title": "",
