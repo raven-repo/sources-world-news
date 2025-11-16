@@ -1,0 +1,4 @@
+{
+  "extractor": "css",
+  "locator": "span[class=\"D(ib) Ell\"]"
+}

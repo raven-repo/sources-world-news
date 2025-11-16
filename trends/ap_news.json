@@ -1,0 +1,4 @@
+{
+  "extractor": "css",
+  "locator": ".AnClick-TrendingLink .PagePromoContentIcons-text"
+}
