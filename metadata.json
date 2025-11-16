@@ -1,0 +1,7 @@
+{
+  "name": "International news",
+  "description": "News from all over the world (English)",
+  "icon": "https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/microchip-icon.png",
+  "zip-url": "https://github.com/raven-repo/sources-world-news/archive/refs/heads/main.zip",
+  "zip-folder": "sources-world-news-main"
+}
