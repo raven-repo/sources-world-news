@@ -1,0 +1,26 @@
+{
+  "name": "Yahoo! Finance",
+  "description": "Get market price of specified stock",
+  "category": "Finance",
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/{ticker}",
+  "options": [
+    {
+      "name": "ticker",
+      "description": "Ticker symbol of the stock",
+      "example": "AAPL"
+    }
+  ],
+  "items": {
+    "extractor": "json",
+    "title": ".chart.result.[0].meta.regularMarketPrice",
+    "subtitle": ".chart.result.[0].meta.longName",
+    "leading": {
+      "top": "",
+      "bottom": ""
+    },
+    "trailing": "",
+    "thumbnail": "",
+    "notes": [],
+    "url": ""
+  }
+}
