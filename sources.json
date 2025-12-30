@@ -2,7 +2,7 @@
   "name": "World News",
   "description": "",
   "changelog": "CHANGELOG.md",
-  "feeds": [
+  "publishers": [
     {
       "name": "Reuters",
       "file": "feeds/world/reuters.json",
