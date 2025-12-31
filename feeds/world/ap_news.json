@@ -43,8 +43,8 @@
       "category": "",
       "content": []
     },
-    "timezone": "Unix Epoch",
-    "date-format": "",
+    "timezone": "",
+    "date-format": "Unix Epoch",
     "modifications": []
   },
   "search-url": "{home-page}/search?q={query}&p={page}",
