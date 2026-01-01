@@ -29,6 +29,11 @@
       "other-versions": []
     }
   ],
-  "watches": []
+  "watches": [
+    {
+      "name": "Yahoo! Finance",
+      "file": "watches/stock/yahoo.json",
+    }
+  ]
 }
 
