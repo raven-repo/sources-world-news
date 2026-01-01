@@ -3,6 +3,7 @@
   "description": "Get market price of specified stock",
   "category": "Finance",
   "url": "https://query2.finance.yahoo.com/v8/finance/chart/{ticker}",
+  "thumbnail": "https://finance.yahoo.com/favicon.ico",
   "options": [
     {
       "name": "ticker",
