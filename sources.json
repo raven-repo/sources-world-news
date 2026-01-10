@@ -32,7 +32,7 @@
   "watches": [
     {
       "name": "Yahoo! Finance",
-      "file": "watches/stock/yahoo.json",
+      "file": "watches/stock/yahoo.json"
     }
   ]
 }
