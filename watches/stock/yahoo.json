@@ -13,8 +13,8 @@
   ],
   "items": {
     "extractor": "json",
-    "title": "$.chart.result[0].meta.regularMarketPrice",
-    "subtitle": "$.chart.result[0].meta.longName",
+    "title": "$.chart.result[0].meta.longName",
+    "subtitle": "$.chart.result[0].meta.regularMarketPrice",
     "leading": {
       "top": "",
       "bottom": ""
