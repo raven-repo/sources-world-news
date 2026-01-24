@@ -13,8 +13,17 @@
   ],
   "items": {
     "extractor": "json",
-    "title": "$.chart.result[0].meta.longName",
-    "subtitle": "$.chart.result[0].meta.regularMarketPrice",
+    "title": [
+      "$.chart.result[0].meta.longName",
+      " (",
+      "$.chart.result[0].meta.symbol",
+      ")"
+    ],
+    "subtitle": [
+      "$.chart.result[0].meta.regularMarketPrice",
+      " ",
+      "$.chart.result[0].meta.currency"
+    ],
     "leading": {
       "top": "",
       "bottom": ""
@@ -25,6 +34,6 @@
     },
     "image": "",
     "notes": [],
-    "url": ""
+    "url": "https://finance.yahoo.com/quote/{ticker}/"
   }
 }
