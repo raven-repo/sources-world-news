@@ -4,6 +4,7 @@
   "category": "Finance",
   "url": "https://query2.finance.yahoo.com/v8/finance/chart/{ticker}",
   "thumbnail": "https://finance.yahoo.com/favicon.ico",
+  "homepage": "https://finance.yahoo.com"
   "options": [
     {
       "name": "ticker",
