@@ -1,4 +1,7 @@
 {
+  "name": "AP News",
+  "url": "https://apnews.com/",
+  "favicon": "https://apnews.com/favicon.ico",
   "extractor": "css",
   "locator": ".AnClick-TrendingLink .PagePromoContentIcons-text"
 }
